@@ -6,6 +6,10 @@ export default Ember.Route.extend({
 		var parsedJson = JSON.parse(jsonString);
 		parsedJson = parsedJson.items;
 		console.log(parsedJson);
+		parsedJson.sort(function(a, b) {
+    		return parseFloat(b.donations) - parseFloat(a.donations);
+		});
+		console.log(parsedJson);
 		return parsedJson;
 	}
 });
