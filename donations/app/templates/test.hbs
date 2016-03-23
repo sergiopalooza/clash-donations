@@ -1,0 +1,7 @@
+{{outlet}}
+<h2>test data from json</h2>
+{{#each model as |member|}}
+	<h3>{{member.clanRank}}: {{member.name}}</h3>
+	<p>Level: {{member.expLevel}}</p>
+	<p>Donations: {{member.donations}}</p>
+{{/each}}
